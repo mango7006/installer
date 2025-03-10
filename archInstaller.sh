@@ -53,6 +53,7 @@ genfstab -U /mnt >>/mnt/etc/fstab
 
 echo "end of disk setup, continuing to chrooting"
 
+wget -L https://raw.githubusercontent.com/mango7006/installer/refs/heads/main/postChroot.sh
 cp postChroot.sh /mnt
 chmod +x /mnt/postChroot.sh
-arch-chroot /mnt ./postChroot.sh
+arch-chroot /mnt /postChroot.sh
